@@ -8,8 +8,8 @@ const app = express();
 const connectDB = require("./db/connect");
 
 // error handler
-const notFoundMiddleware = require("../../../file-image/middleware/not-found");
-const errorHandlerMiddleware = require("../../../file-image/middleware/error-handler");
+const notFoundMiddleware = require("./middleware/not-found");
+const errorHandlerMiddleware = require("./middleware/error-handler");
 
 app.get("/", (req, res) => {
     res.send("<h1>File Upload Starter</h1>");
