@@ -135,7 +135,7 @@ ul {
 .btn {
     cursor: pointer;
     color: var(--white);
-    background: var(--primary-500);
+    background: var(--primary-100);
     border: transparent;
     border-radius: var(--borderRadius);
     letter-spacing: var(--letterSpacing);
@@ -146,7 +146,7 @@ ul {
     display: inline-block;
 }
 .btn:hover {
-    background: var(--primary-700);
+    background: var(--primary-300);
     box-shadow: var(--shadow-3);
 }
 .btn-hipster {
