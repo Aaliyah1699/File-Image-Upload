@@ -2,6 +2,7 @@ const path = require("path");
 const { StatusCodes } = require("http-status-codes");
 const customError = require("../errors");
 const cloudinary = require("cloudinary").v2;
+const fs = require("fs");
 
 const uploadProductImage = async (req, res) => {
     const result = await cloudinary.uploader.upload(
@@ -11,6 +12,7 @@ const uploadProductImage = async (req, res) => {
             folder: "Files and Image upload api",
         }
     );
+    fs.unlinkSync(req.files.image.tempFilePath);
     return res
         .status(StatusCodes.OK)
         .json({ image: { src: result.secure_url } });
